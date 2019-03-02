@@ -1,0 +1,18 @@
+[Unit]
+Description=Arduinopinic daemon service
+After=network-online.target
+ 
+[Service]
+Type=simple
+ 
+User=pi
+ 
+ExecStart=/home/pi/Arduinopinic/.venv/venvArduinopinic/bin/python /home/pi/Arduinopinic/manage.py runserver 0:8000
+ 
+Restart=on-failure
+ 
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=300
+ 
+[Install]
+WantedBy=multi-user.target
