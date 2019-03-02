@@ -9,7 +9,7 @@ if [ -z "$MY_PATH" ] ; then
   exit 1  # fail
 fi
 
-cd $PATH
+cd $MY_PATH
 cd ..
 INSTALL_PATH=$PWD
 DJANGO_PATH=${PWD}/Arduinopinic
