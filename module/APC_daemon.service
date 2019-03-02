@@ -7,7 +7,7 @@ Type=simple
  
 User=pi
  
-ExecStart=/home/pi/Arduinopinic/.venv/venvArduinopinic/bin/python /home/pi/Arduinopinic/Arduinopinic/daemon/daemon.py
+ExecStart=REPOCHEMIN/.venv/venvArduinopinic/bin/python DAEMONCHEMIN/daemon.py
  
 Restart=on-failure
  

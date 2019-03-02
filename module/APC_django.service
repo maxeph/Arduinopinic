@@ -7,7 +7,7 @@ Type=simple
  
 User=pi
  
-ExecStart=/home/pi/Arduinopinic/.venv/venvArduinopinic/bin/python /home/pi/Arduinopinic/manage.py runserver 0:8000
+ExecStart=REPOCHEMIN/.venv/venvArduinopinic/bin/python REPOCHEMIN/manage.py runserver 0:8000
  
 Restart=on-failure
  
