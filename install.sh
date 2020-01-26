@@ -24,15 +24,12 @@ sed -i "s/REPOCHEMIN/${DJANGO_PATH//\//\\/}/g" module/APC_django.service
 
 #########
 
-echo -e "\n\033[32m######## installing virtualenv ########\033[0m"
-sudo apt-get install virtualenv -y
-
 echo -e "\n\033[32m######## cloning repositories ########\033[0m"
 git clone https://github.com/maxeph/frontend_Arduinopinic.git ../Arduinopinic
 git clone https://github.com/maxeph/daemon_Arduinopinic.git ../Arduinopinic/Arduinopinic/daemon
 
 echo -e "\n\033[32m######## creating virtualenv ########\033[0m"
-virtualenv ../Arduinopinic/.venv/venvArduinopinic && source ../Arduinopinic/.venv/venvArduinopinic/bin/activate
+python3 -m venv ../Arduinopinic/.venv/venvArduinopinic && source ../Arduinopinic/.venv/venvArduinopinic/bin/activate
 
 echo -e "\n\033[32m######## installing dependencies ########\033[0m"
 pip install django crcmod arrow smbus2 terminaltables docopt
